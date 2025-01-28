@@ -20,8 +20,6 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-//Usar rutas
-app.use(indexRoute);
 
 
 // Define la carpeta de archivos estáticos
@@ -29,7 +27,7 @@ app.use(express.static(join(__dirname, 'public')));
 
 
 app.get('/', (req, res) => res.render('index')); // renderiza a vista index.ejs
-app.use(router)
+app.use(indexRoute)
 
 Conectar();
 
