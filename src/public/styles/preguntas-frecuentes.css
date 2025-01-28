@@ -1,0 +1,74 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+
+
+/* Botón de flecha */
+.p-4 {
+    position: relative;
+}
+.p-4 img {
+    width: 30px; /* Imagen un poco más grande */
+    height: 30px;
+    position: absolute;
+    bottom: -10px; /* Más abajo */
+    left: 20px; /* Más a la derecha */
+}
+
+
+  /* Main Cards */
+  .main-cards .card {
+    background: linear-gradient(145deg, #e8f8ff, #d4f1fc);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .main-cards .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .main-cards .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .main-cards .card-text {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .main-cards .card i {
+    font-size: 3rem;
+    margin-top: 15px;
+    color: #0077cc;
+  }
+  
+  /* FAQ Section */
+  .faq-section h2 {
+    font-size: 2.5rem;
+    color: #0077cc;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .accordion-button {
+    background-color: #e8f8ff;
+    color: #0077cc;
+    font-weight: bold;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  
+  .accordion-body {
+    font-size: 1rem;
+    color: #555;
+  }
+  

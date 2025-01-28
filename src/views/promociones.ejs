@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/promociones.css">
+    <title>Promociones</title>
+</head>
+<body>
+
+    <style>
+    body {
+        background-color: #a3d5e5; /* Color celeste */
+        color: white; /* Color de texto blanco por defecto */
+        margin: 0; /* Eliminar márgenes por defecto del body */
+      }
+      .card {
+        background-color: #2d3748; /* Color de fondo de la tarjeta */
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 10px; /* Espaciado interno reducido */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+        transition: transform 0.2s; /* Efecto de transición */
+        flex: 1 1 calc(25% - 20px); /* Cuatro tarjetas por fila */
+        margin: 30px; /* Espaciado entre las tarjetas */
+        max-width: 500px; /* Tamaño máximo de las tarjetas */
+      }
+
+      /* Media query para pantallas más pequeñas (como móviles) */
+      @media (max-width: 768px) {
+        .card {
+          flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          flex: 1 1 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+        }
+      }
+
+      .card img {
+        max-width: 100%; /* Imagen responsive */
+        border-radius: 8px; /* Bordes redondeados de la imagen */
+      }
+      .card-container {
+        display: flex; /* Utiliza flexbox para la disposición */
+        flex-wrap: wrap; /* Permite que las tarjetas se muevan a la siguiente línea */
+        justify-content: center; /* Centra las tarjetas en el contenedor */
+      }
+      h1 {
+        color: black; /* Cambiar el color del encabezado a negro */
+      }
+    </style>
+
+
+    <a href="/" class="p-4 hover:bg-gray-100 transition">
+        <img src="/images/FlechaAtras.png" alt="Volver" class="rotate-90 w-10 h-10 object-contain cursor-pointer">
+    </a>
+
+
+    <main class="flex min-h-screen flex-col items-center">
+      <h1 class="text-4xl font-bold text-center my-6">CATÁLOGO DE PLATOS</h1>
+
+      <div class="container mt-4">
+      <div id="mostrarPlatos" >
+      </div>
+        </div>
+
+      
+        <script>
+            async function getPlatos() {
+                try {
+                    const response = await fetch(
+                        "http://localhost:3000/api/get-platos",
+                        {
+                            method: "GET",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                        }
+                    );
+                    const platos = await response.json();
+                    const mostrarPlatosDiv = document.getElementById('mostrarPlatos');
+                    let rowDiv;
+        
+                    platos.forEach((plato, index) => {
+                        if (index % 4 === 0) {
+                            rowDiv = document.createElement('div');
+                            rowDiv.classList.add('row', 'mb-4');
+                            mostrarPlatosDiv.appendChild(rowDiv);
+                        }
+        
+                        const platoDiv = document.createElement('div');
+                        platoDiv.classList.add('col-md-3', 'mb-4');
+                        platoDiv.innerHTML = `
+                            <div class="card" style="width: 18rem;">
+                                <img src="${plato.url}" class="card-img-top" alt="${plato.titulo}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${plato.titulo}</h5>
+                                    <p class="card-text">${plato.descripcion}</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        `;
+                        rowDiv.appendChild(platoDiv);
+                    });
+        
+                } catch (error) {
+                    console.error("Error al obtener Platos", error);
+                }
+            }
+        
+            getPlatos();
+        </script>
+    </main>
+    <br /><br />
+
+</body>
+</html>

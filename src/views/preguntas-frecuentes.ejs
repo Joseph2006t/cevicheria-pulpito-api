@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cevichería El Pulpito</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/styles/preguntas-frecuentes.css">
+</head>
+<body>
+
+
+
+    <a href="/" class="p-4 hover:bg-gray-100 transition">
+        <img src="/images/FlechaAtras.png" alt="Volver" class="rotate-90 w-10 h-10 object-contain cursor-pointer">
+    </a>
+
+    
+  <!-- Sección de Cartas -->
+  <section class="main-cards py-5">
+    <div class="container">
+      <div class="row text-center">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title text-primary"><i class="bi bi-geo-alt-fill"></i> Ubicación Estratégica</h3>
+              <p class="card-text">Nos encontramos en el corazón de Huaycán, con fácil acceso y estacionamiento gratuito.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title text-success"><i class="bi bi-award-fill"></i> Calidad Garantizada</h3>
+              <p class="card-text">Usamos ingredientes frescos del día, directamente del mercado local.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title text-danger"><i class="bi bi-gift-fill"></i> Promociones Únicas</h3>
+              <p class="card-text">¡Ceviches al 2x1 todos los martes! Perfecto para disfrutar en familia o con amigos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes -->
+  <section class="faq-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+      <div class="accordion" id="faqAccordion">
+        <!-- Pregunta 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+              ¿Cuáles son los horarios de atención?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Estamos abiertos de lunes a domingo, de 12:00 p.m. a 9:00 p.m.
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              ¿Tienen opciones veganas o vegetarianas?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí, contamos con ensaladas y ceviches veganos hechos con insumos frescos.
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              ¿Realizan eventos privados o catering?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí, organizamos eventos privados con menú personalizado. Contáctanos para más información.
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+              ¿Aceptan pagos con tarjeta o transferencias?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí, aceptamos Visa, Mastercard, Yape y Plin.
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+              ¿De dónde proviene el pescado?
+            </button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Todo nuestro pescado proviene de mercados locales y se selecciona cuidadosamente cada día.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

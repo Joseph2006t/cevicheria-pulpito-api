@@ -1,0 +1,165 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Botón de flecha */
+.p-4 {
+    position: relative;
+}
+.p-4 img {
+    width: 30px; /* Imagen un poco más grande */
+    height: 30px;
+    position: absolute;
+    bottom: -50px; /* Más abajo */
+    left: 15px; /* Más a la derecha */
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+    background-image: url('/images/ImagenFondo.jpg'); /* Asegúrate de reemplazar esto con la imagen del hero */
+    background-size: cover;
+    background-position: center;
+    height: 110vh; /* Altura mínima del hero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Sección de las cards */
+.card {
+    background-color: #00bcd4; /* Color aqua */
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 50px; /* Tamaño reducido de los logos */
+    height: 50px;
+    object-fit: contain; /* Mantener la proporción */
+    margin-right: 15px; /* Separación entre la imagen y el texto */
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card-body .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-body .card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card-body a {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card-body a:hover {
+    color: #ff9800; /* Color al pasar el cursor */
+}
+
+/* Disposición de las cards en columnas */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.col-md-4 {
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 280px; /* Evitar que las cards sean demasiado pequeñas */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .card-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-body img {
+        margin-bottom: 10px;
+    }
+
+    .card-body .card-title {
+        font-size: 1rem;
+    }
+
+    .card-body .card-text {
+        font-size: 0.9rem;
+    }
+
+    .col-md-4 {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .card-body .card-title {
+        font-size: 0.9rem;
+    }
+
+    .card-body .card-text {
+        font-size: 0.8rem;
+    }
+}

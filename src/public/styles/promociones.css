@@ -1,0 +1,130 @@
+
+
+
+/* Botón de flecha */
+.p-4 {
+    position: relative;
+}
+.p-4 img {
+    width: 30px; /* Imagen un poco más grande */
+    height: 30px;
+    position: absolute;
+    bottom: -30px; /* Más abajo */
+    left: 15px; /* Más a la derecha */
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.card {
+    
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Preserva el color del texto */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.card-container {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos tarjetas por fila */
+    }
+
+    .card {
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .card .card-body {
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .price-tag {
+        font-size: 0.9rem;
+        display: block;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Para pantallas medianas y grandes */
+@media (min-width: 769px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta las tarjetas automáticamente */
+    }
+
+    .card {
+        padding: 1.5rem;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card .card-body {
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        margin: 0.75rem 0;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .price-tag {
+        font-size: 1rem;
+        display: block;
+        margin-top: 0.5rem;
+    }
+}

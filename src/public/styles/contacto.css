@@ -1,0 +1,173 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Botón de flecha */
+.p-4 {
+    position: relative;
+}
+.p-4 img {
+    width: 30px; /* Imagen un poco más grande */
+    height: 30px;
+    position: absolute;
+    bottom: -30px; /* Más abajo */
+    left: 25px; /* Más a la derecha */
+}
+
+/* Título principal */
+h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Imagen principal (logo) */
+img[alt="ImagenLogo"] {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+/* Estilos para botones */
+.botones {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.botones .boton1, .botones .boton2, .botones .boton3, .botones .boton4 {
+    margin: 0px 0;
+}
+
+.botones h4 {
+    font-size: 1.2rem;
+    color: black;
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px; /* Botones del mismo tamaño */
+    display: inline-block;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.botones h4:hover {
+    background-color: #00ced1;
+}
+
+/* Sección de redes sociales */
+.destacados {
+    background-color: #fff;
+    padding: 20px 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.destacados h3 {
+    font-size: 1.8rem;
+    color: #28a745;
+}
+
+.destacados .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.destacados .col-md-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 50px; /* Iconos pequeños */
+    height: 50px;
+    border-radius: 5px;
+}
+
+.social-icon a {
+    color: #333;
+    font-size: 2rem;
+}
+
+.social-icon a:hover {
+    color: #007bff;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .destacados h3 {
+        font-size: 1.5rem;
+    }
+
+    .social-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .botones h4 {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .destacados .row {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .social-icon a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px){
+
+    .botones h4 {
+        font-size: 2rem;
+        color: black;
+        background-color: aqua;
+        padding: 20px;
+        border-radius: 5px;
+        width: 500px; /* Botones del mismo tamaño */
+        display: inline-block;
+        transition: background-color 0.3s;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
